@@ -1,1 +1,1 @@
-# static-site-webpack
+# Webpack static site 
