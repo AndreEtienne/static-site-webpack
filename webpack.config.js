@@ -2,6 +2,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const webpack = require('webpack')
 const extractPlugin = new ExtractTextPlugin({
 	filename: 'main.css'
 })
@@ -38,7 +39,7 @@ module.exports = {
 				use: ['html-loader']
 			},
 			{
-				test: /\.(jgg|png)/,
+				test: /\.(jgg|png|svg)/,
 				use: [
 						{
 					loader: 'file-loader',
@@ -54,6 +55,10 @@ module.exports = {
 	},
 	plugins: [
 		extractPlugin,
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        }),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
 		}),

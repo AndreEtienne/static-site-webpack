@@ -1,5 +1,36 @@
+@import "font";
 @import "colors";
+@import "default";
 @import "~bootstrap/scss/bootstrap-grid";
+@import "~@cmyee/pushy/scss/demo";
+@import "~@cmyee/pushy/scss/pushy.scss";
 body{
 	margin: 0px;
+}
+.tsgb-main-nav{
+
+	.tsgb-logo{
+		margin-left: 15px;
+		display: inline-flex;
+		img{
+			height: 55px;
+		}
+	}
+	.tsgb-nav-page{
+		display: flex;
+		flex: 1;
+		justify-content: space-around;
+		ul{
+			font-weight: 300;
+			display: flex;
+			align-items: flex-end;
+			li:first-child{
+				border-left: solid 2px $main-color;
+			}
+			li{
+				padding: 5px 10px;
+				border-right: solid 2px $main-color ;
+			}
+		}
+	}
 }
