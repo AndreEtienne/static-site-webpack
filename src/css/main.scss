@@ -2,19 +2,30 @@
 @import "colors";
 @import "default";
 @import "~bootstrap/scss/bootstrap-grid";
-@import "~@cmyee/pushy/scss/demo";
 @import "~@cmyee/pushy/scss/pushy.scss";
 body{
 	margin: 0px;
 }
 .tsgb-main-nav{
-
+	display: flex;
 	.tsgb-logo{
 		margin-left: 15px;
 		display: inline-flex;
 		img{
 			height: 55px;
 		}
+	}
+	.tsgb-menu-entry{
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.menu-btn{
+		cursor: pointer;
+		font-size: 26px;
+		line-height: 21px;
+		padding: 10px;
 	}
 	.tsgb-nav-page{
 		display: flex;
