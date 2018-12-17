@@ -6,8 +6,53 @@
 body{
 	margin: 0px;
 }
+.pushy{
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	background: $main-color-background;
+	a{
+		color: $main-color-background-font;
+	}
+	a:hover{
+		color: $main-color-background-font;
+	}
+	.pushy-submenu{
+		div{
+			display: block;
+			color: #b3b3b1;
+			padding: 15px 30px;
+			text-decoration: none;
+			position: relative;
+		}
+		div::after{
+			content: '';
+			display: block;
+			height: 11px;
+			width: 8px;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			background: url(../img/arrow.svg) no-repeat;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			transition: transform 0.2s;
+		}
+	}
+	.pushy-link{
+	}
+	.pushy-submenu {
+		.pushy-link{
+			border-left: none;
+		}
+	}
+}
 .tsgb-main-nav{
+	z-index: 1;
 	display: flex;
+	height: 60px;
+	background-color: $main-color-background;
 	.tsgb-logo{
 		margin-left: 15px;
 		display: inline-flex;
@@ -29,19 +74,36 @@ body{
 	}
 	.tsgb-nav-page{
 		display: flex;
-		flex: 1;
-		justify-content: space-around;
+		flex: 1 1 ;
+		justify-content: flex-start;
 		ul{
+			margin-left: 20px;
+			cursor: pointer;
 			font-weight: 300;
 			display: flex;
 			align-items: flex-end;
-			li:first-child{
-				border-left: solid 2px $main-color;
+			li:first-child {
+				margin-left: 0px;
 			}
 			li{
-				padding: 5px 10px;
-				border-right: solid 2px $main-color ;
+				margin: 0px 10px;
+
+				a {
+					color: $main-color-background-font;
+					padding-bottom: 5px;
+					display: block;
+					font-size: 25px;
+				}
 			}
 		}
 	}
 }
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%
+}
+.sticky + .tsgb-main-content {
+	padding-top: 60px;
+}
+

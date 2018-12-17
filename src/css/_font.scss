@@ -10,6 +10,8 @@
   @return $tracking / ($font-size * 16) * 1em;
 }
 body{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', sans-serif;
 }
 h1{
@@ -19,24 +21,28 @@ h1{
   letter-spacing: mdc-typography-get-letter-spacing_(-1.5, 6);
   text-decoration: inherit;
   text-transform: inherit;
+  margin: 0;
 }
 h2{
   font-size: 3.75rem; // 60sp
   line-height: 3.75rem;
   font-weight: 300;
   letter-spacing: mdc-typography-get-letter-spacing_(-.5, 3.75);
+  margin: 0;
 }
 h3{
   font-size: 3rem;
   font-weight: 400;
   line-height: 3.125rem;
   letter-spacing: normal;
+  margin: 0;
 }
 h4{
   font-size: 2.125rem;
   line-height: 2.5rem;
   font-weight: 400;
   letter-spacing: mdc-typography-get-letter-spacing_(.25, 2.125);
+  margin: 0;
 }
 p{
   font-family: "Open Sans", sans-serif;

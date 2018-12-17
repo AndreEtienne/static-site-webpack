@@ -39,7 +39,7 @@ module.exports = {
 				use: ['html-loader']
 			},
 			{
-				test: /\.(jgg|png|svg)/,
+				test: /\.(jpg|png|svg)/,
 				use: [
 						{
 					loader: 'file-loader',
@@ -62,12 +62,13 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
 		}),
-		new BrowserSyncPlugin({
+		// new BrowserSyncPlugin({
 			// browse to http://localhost:3000/ during development,
       // ./public directory is being served
-      host: 'localhost',
-      port: 8080,
-      server: { baseDir: ['dist'] }
-		})
+      //host: 'localhost',
+      // port: 8080
+      //server: { baseDir: ['dist'] }
+		// })
+
 	]
 }
