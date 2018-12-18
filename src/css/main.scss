@@ -1,8 +1,12 @@
-@import "font";
 @import "colors";
+@import "font";
 @import "default";
 @import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/images";
 @import "~@cmyee/pushy/scss/pushy.scss";
+@import "~tiny-slider/src/tiny-slider.scss";
+
 body{
 	margin: 0px;
 }
@@ -48,6 +52,7 @@ body{
 		}
 	}
 }
+
 .tsgb-main-nav{
 	z-index: 1;
 	display: flex;
@@ -97,6 +102,25 @@ body{
 					font-size: 25px;
 				}
 			}
+		}
+	}
+}
+.tsgb-header-img{
+	height: 500px;
+	background-repeat: no-repeat, repeat;
+	background-position: center;
+	background-size: cover;
+}
+.tsgb-header-img-1{
+	background-image: url("../img/bg.jpg");
+}
+.tsgb-header-img-2{
+	background-image: url("../img/bg.jpg");
+}
+.tsgb-header-img{
+	.container.black-theme {
+		h2 ,p{
+			background-color:rgba(255,0,0,0.3)
 		}
 	}
 }

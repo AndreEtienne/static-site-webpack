@@ -47,3 +47,15 @@ h4{
 p{
   font-family: "Open Sans", sans-serif;
 }
+body{
+  .black-theme{
+    color: $main-color-black-theme-font;
+  }
+  a.black-theme{
+    color: $main-color-black-theme-font;
+  }
+  p.black-theme{
+    color: $main-color-black-theme-font;
+  }
+}
+

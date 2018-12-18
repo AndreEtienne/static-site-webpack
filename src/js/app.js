@@ -2,10 +2,19 @@ require('jquery')
 require('popper.js')
 require('bootstrap')
 require('../../node_modules/@cmyee/pushy/js/pushy.js')
+import {tns} from '../../node_modules/tiny-slider/src/tiny-slider'
 import '../css/main.scss'
 
 $( document ).ready(function() {
-    // Get the header
+    var slider = tns({
+        container: '.tsgb-slider-header',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        controls: false,
+        nav: false,
+        autoplayButtonOutput: false
+    })
     window.onscroll = function() {myFunction()};
     var header = document.getElementById("nav");
 
