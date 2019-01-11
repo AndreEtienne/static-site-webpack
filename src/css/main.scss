@@ -9,6 +9,8 @@
 
 body{
 	margin: 0px;
+	padding-top: 60px;
+
 }
 .pushy{
 
@@ -57,6 +59,10 @@ body{
 	z-index: 1;
 	display: flex;
 	height: 60px;
+	position: fixed;
+	top: 0;
+	transition: top 0.2s ease-in-out;
+	width: 100%;
 	background-color: $main-color-background;
 	.tsgb-logo{
 		margin-left: 15px;
@@ -89,6 +95,7 @@ body{
 			font-weight: 300;
 			display: flex;
 			align-items: flex-end;
+			margin-bottom: 0px;
 			li:first-child {
 				margin-left: 0px;
 			}
@@ -103,7 +110,21 @@ body{
 				}
 			}
 		}
+		ul > li:hover{
+			.dropdown{
+				display: block;
+				background-color: $main-color-background;
+			}
+		}
+		.dropdown{
+			position: absolute;
+			z-index: 2;
+			display: none;
+		}
 	}
+}
+.nav-up {
+	top: -70px;
 }
 .tsgb-header-img{
 	height: 500px;
@@ -123,13 +144,5 @@ body{
 			background-color:rgba(255,0,0,0.3)
 		}
 	}
-}
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%
-}
-.sticky + .tsgb-main-content {
-	padding-top: 60px;
 }
 
