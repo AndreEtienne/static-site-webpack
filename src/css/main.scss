@@ -13,7 +13,6 @@ body{
 
 }
 .pushy{
-
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	background: $main-color-background;
@@ -89,19 +88,20 @@ body{
 		display: flex;
 		flex: 1 1 ;
 		justify-content: flex-start;
-		ul{
+		position: relative;
+		>ul{
 			margin-left: 20px;
 			cursor: pointer;
 			font-weight: 300;
 			display: flex;
 			align-items: flex-end;
 			margin-bottom: 0px;
-			li:first-child {
+			>li:first-child {
 				margin-left: 0px;
 			}
-			li{
+			>li{
 				margin: 0px 10px;
-
+				white-space: nowrap;
 				a {
 					color: $main-color-background-font;
 					padding-bottom: 5px;
@@ -113,13 +113,21 @@ body{
 		ul > li:hover{
 			.dropdown{
 				display: block;
-				background-color: $main-color-background;
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 		.dropdown{
 			position: absolute;
 			z-index: 2;
-			display: none;
+			background-color: $nav-dropdown-color;
+			visibility:hidden;
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+			min-width: 220px;
+			ul{
+				padding: 15px;
+			}
 		}
 	}
 }
