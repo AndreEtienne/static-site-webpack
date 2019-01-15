@@ -9,7 +9,7 @@ const extractPlugin = new ExtractTextPlugin({
 	filename: 'main.css'
 })
 function watcher (env) {
-	return env !== 'production' ? true : false;
+	return env !== 'production';
 }
 config = {
 	mode,
@@ -52,12 +52,35 @@ module.exports = (env, options) => {
 						{
 							loader: 'file-loader',
 							options: {
+								outputPath: 'img',
 								name: '[name].[ext]',
-								outputPath: 'img/',
-								publicPath: 'img/'
+							},
+						},
+						{
+							loader: 'image-webpack-loader',
+							options: {
+								mozjpeg: {
+									progressive: true,
+									quality: 65
+								},
+								// optipng.enabled: false will disable optipng
+								optipng: {
+									enabled: false,
+								},
+								pngquant: {
+									quality: '65-90',
+									speed: 4
+								},
+								gifsicle: {
+									interlaced: false,
+								},
+								// the webp option will enable WEBP
+								webp: {
+									quality: 30
+								}
 							}
-						}
-					]
+						},
+					],
 				}
 			]
 		},
@@ -69,17 +92,6 @@ module.exports = (env, options) => {
 			}),
 			new HtmlWebpackPlugin({
 				template: 'src/index.html'
-			}),
-			new ImageminPlugin({test: 'img/**'}),
-			new ImageminPlugin({
-				// disable: process.env.NODE_ENV !== 'production', // Disable during development
-				pngquant: {
-					quality: '95-100',
-					optimizationLevel: 9
-				},
-				jpegtran: {
-					optimizationLevel: 9
-				}
 			})
 		]
 	}
