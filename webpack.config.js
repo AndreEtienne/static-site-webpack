@@ -52,8 +52,9 @@ module.exports = (env, options) => {
 						{
 							loader: 'file-loader',
 							options: {
-								outputPath: 'img',
 								name: '[name].[ext]',
+								outputPath: 'img/',
+								publicPath: 'img/',
 							},
 						},
 						{
@@ -61,7 +62,7 @@ module.exports = (env, options) => {
 							options: {
 								mozjpeg: {
 									progressive: true,
-									quality: 65
+									quality: 30
 								},
 								// optipng.enabled: false will disable optipng
 								optipng: {
@@ -75,9 +76,6 @@ module.exports = (env, options) => {
 									interlaced: false,
 								},
 								// the webp option will enable WEBP
-								webp: {
-									quality: 30
-								}
 							}
 						},
 					],
