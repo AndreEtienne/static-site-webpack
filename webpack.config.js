@@ -31,7 +31,7 @@ module.exports = (env, options) => {
 						{
 							loader: 'babel-loader',
 							options: {
-								presets: ['latest']
+								presets: ['@babel/preset-env']
 							}
 						}
 					]
@@ -41,8 +41,7 @@ module.exports = (env, options) => {
 					use: extractPlugin.extract({
 						use: [
 							{
-								loader: 'css-loader',
-								options: { minimize: true }
+								loader: 'css-loader'
 							},
 							{
 								loader: 'sass-loader'
