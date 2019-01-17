@@ -20,7 +20,6 @@ module.exports = (env, options) => {
 		output: {
 			path: path.resolve(__dirname, 'dist'),
 			filename: 'bundle.js',
-			// publicPath: '/dist'
 		},
 		watch: watcher(options.mode),
 		module: {
@@ -50,8 +49,8 @@ module.exports = (env, options) => {
 					})
 				},
 				{
-					test: /\.html$/,
-					use: ['html-loader']
+					test: /\.pug$/,
+					use: ['pug-loader']
 				},
 				{
 					test: /\.(jpg|png|svg)/,
@@ -96,7 +95,7 @@ module.exports = (env, options) => {
 				jQuery: "jquery"
 			}),
 			new HtmlWebpackPlugin({
-				template: 'src/index.html'
+				template: 'src/index.pug'
 			})
 		]
 	}
