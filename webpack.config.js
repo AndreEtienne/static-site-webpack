@@ -17,7 +17,7 @@ config = {
 module.exports = (env, options) => {
 	return {
 		entry: {
-			main: './src/js/app.js'
+			main: './src/js/app.js',
 		},
 		output: {
 			path: path.resolve(__dirname, 'dist'),

@@ -10,7 +10,9 @@
 body{
 	margin-top: 60px;
 }
-
+.main-page{
+	margin-bottom: 30px;
+}
 .pushy{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
@@ -43,8 +45,6 @@ body{
 			transform: translateY(-50%);
 			transition: transform 0.2s;
 		}
-	}
-	.pushy-link{
 	}
 	.pushy-submenu {
 		.pushy-link{
@@ -145,22 +145,42 @@ body{
 		flex-direction: column;
 	}
 }
-.tsgb-header-img{
-
+.header-pointer{
+	margin-bottom: 15px;
+}
+.show-img-conatiner{
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 500px;
+	max-height: 500px;
+	flex: 1 1 auto;
 	background-repeat: no-repeat, repeat;
 	background-position: center;
 	background-size: cover;
-}
-.tsgb-header-img-1{
-	background-image: url("../img/bg.jpg");
-}
-.tsgb-header-img-2{
-	background-image: url("../img/bg.jpg");
-}
-.tsgb-header-img{
-	.container.black-theme {
-		h2 ,p{
-			background-color:rgba(255,0,0,0.3)
+	&.img{
+		background-image: url("../img/zumba.jpg");
+	}
+	&.img-1{
+		background-image: url("../img/bg.jpg");
+	}
+	.content{
+		background: $main-color-background;
+		padding: 15px;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		transform: translateY(60px);
+		transition: transform 0.3s;
+	}
+	&:hover{
+		.content{
+			transform: translateY(0px)
 		}
 	}
 }
+
