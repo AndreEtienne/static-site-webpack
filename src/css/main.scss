@@ -7,6 +7,10 @@
 @import "~@cmyee/pushy/scss/pushy.scss";
 @import "~tiny-slider/src/tiny-slider.scss";
 
+body{
+	margin-top: 60px;
+}
+
 .pushy{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
@@ -159,11 +163,4 @@
 			background-color:rgba(255,0,0,0.3)
 		}
 	}
-}
-.parallax {
-	background: white;
-	display: flex;
-	z-index: 4;
-	position: relative;
-	margin-top: 1024px;
 }

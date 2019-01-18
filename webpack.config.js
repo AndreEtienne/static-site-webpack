@@ -16,10 +16,12 @@ config = {
 }
 module.exports = (env, options) => {
 	return {
-		entry: './src/js/app.js',
+		entry: {
+			main: './src/js/app.js'
+		},
 		output: {
 			path: path.resolve(__dirname, 'dist'),
-			filename: 'bundle.js',
+			filename: '[name].bundle.js',
 		},
 		watch: watcher(options.mode),
 		module: {
@@ -95,7 +97,15 @@ module.exports = (env, options) => {
 				jQuery: "jquery"
 			}),
 			new HtmlWebpackPlugin({
-				template: 'src/index.pug'
+				template: 'src/index.pug',
+				chunks: ['main'],
+				title: "Startseite"
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'detail.html',
+				template: 'src/detail-page.pug',
+				chunks: ['main'],
+				title: "Content page"
 			})
 		]
 	}
