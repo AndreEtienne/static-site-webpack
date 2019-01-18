@@ -146,7 +146,19 @@ body{
 	}
 }
 .header-pointer{
-	margin-bottom: 15px;
+	.img-pointer{
+		margin-bottom: 15px;
+		position: relative;
+		display: flex;
+		height: 800px;
+		flex: 1 1 auto;
+		background-image: url("../img/bg.jpg");
+		background-repeat: no-repeat, repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+
 }
 .show-img-conatiner{
 	margin-bottom: 15px;
@@ -167,15 +179,22 @@ body{
 	&.img-1{
 		background-image: url("../img/bg.jpg");
 	}
+	&.img-2{
+		background-image: url("../img/tanz_wm_pr__1000.jpg");
+	}
 	.content{
 		background: $main-color-background;
+		height: 200px;
 		padding: 15px;
 		position: absolute;
 		bottom: 0px;
 		left: 0px;
 		width: 100%;
-		transform: translateY(60px);
+		transform: translateY(100px);
 		transition: transform 0.3s;
+		h2{
+			margin-bottom: 40px;
+		}
 	}
 	&:hover{
 		.content{
