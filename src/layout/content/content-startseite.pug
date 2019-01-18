@@ -1,0 +1,10 @@
+- const imgPath = '../../img/'
+mixin showContainer(img)
+    .col-12.col-sm-6
+        .show-img-conatiner
+            img.img-fluid(src=(img))
+.row.no-gutters
+    +showContainer(imgPath + 'bg.jpg')
+    +showContainer(imgPath + 'zumba.jpg')
+    +showContainer(imgPath + 'tanz_wm_pr_1000.jpg')
+
