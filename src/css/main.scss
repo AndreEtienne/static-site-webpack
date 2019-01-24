@@ -227,10 +227,24 @@ body{
 		}
 	}
 }
-@media (max-width: 1024px) {
+
+
+@include media-breakpoint-only(xs) {
 	.main-page.container-fluid{
 		padding: 0px;
+		margin: 0px;
+		.col{
+			padding: 0px;
+		}
+		.row {
+			margin: 0px;
+			>div{
+				padding: 0px;
+			}
+		}
 	}
+}
+@include media-breakpoint-down(lg) {
 	.show-img-conatiner{
 		justify-content: flex-end;
 		.content{
