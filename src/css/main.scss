@@ -185,6 +185,32 @@ body{
 
 
 }
+.img{
+	background-repeat: no-repeat, repeat;
+	background-position: center;
+	background-size: cover;
+	height: 500px;
+	max-height: 500px;
+	transition: transform 0.3s;
+}
+.img{
+	background-image: url("../img/zumba.jpg");
+}
+.img-1{
+	background-image: url("../img/bg.jpg");
+}
+.img-2{
+	background-image: url("../img/tanz_wm_pr__1000.jpg");
+}
+.img-3{
+	background-image: url("../img/dance.jpg");
+}
+.img-4{
+	background-image: url("../img/tanzschule.jpg");
+}
+.img-5{
+	background-image: url("../img/club.jpg");
+}
 .show-img-conatiner{
 	margin-bottom: 30px;
 	position: relative;
@@ -195,27 +221,7 @@ body{
 	height: 500px;
 	max-height: 500px;
 	flex: 1 1 auto;
-	background-repeat: no-repeat, repeat;
-	background-position: center;
-	background-size: cover;
-	&.img{
-		background-image: url("../img/zumba.jpg");
-	}
-	&.img-1{
-		background-image: url("../img/bg.jpg");
-	}
-	&.img-2{
-		background-image: url("../img/tanz_wm_pr__1000.jpg");
-	}
-	&.img-3{
-		background-image: url("../img/dance.jpg");
-	}
-	&.img-4{
-		background-image: url("../img/tanzschule.jpg");
-	}
-	&.img-5{
-		background-image: url("../img/club.jpg");
-	}
+	transition: transform 0.3s;
 	.content{
 		height: 200px;
 		position: absolute;
@@ -257,6 +263,9 @@ body{
 	&:hover{
 		.content{
 			transform: translateY(0px)
+		}
+		.img{
+			transform: scale(1.04);
 		}
 	}
 }
