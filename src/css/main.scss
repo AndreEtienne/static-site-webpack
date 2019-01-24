@@ -154,12 +154,18 @@ body{
 	max-height: 500px;
 	overflow: hidden;
 	.slide{
-		min-height: 500px;
+		max-height: 500px;
+		position: relative;
+
 	}
 	img{
 		object-fit: cover;
-		min-height: 500px;
 		width: 100%;
+		min-height: 500px;
+	}
+	.slide-content{
+		position: absolute;
+
 	}
 }
 .header-pointer{
@@ -190,7 +196,6 @@ body{
 				padding: 0px 15px;
 			}
 			h3{
-				word-break: break-word;
 				background-color: $main-color-background;
 				padding: 15px;
 			}
@@ -226,6 +231,14 @@ body{
 .img-5{
 	background-image: url("../img/club.jpg");
 }
+.category{
+	text-transform: uppercase;
+	background-color: $main-color;
+	padding: 5px 15px;
+	color: $main-color-background;
+	display: inline-flex;
+	font-weight: 400;
+}
 .show-img-conatiner{
 	margin-bottom: 30px;
 	position: relative;
@@ -245,7 +258,7 @@ body{
 		width: 100%;
 		transform: translateY(70px);
 		transition: transform 0.3s;
-		.categorie{
+		.category{
 			text-transform: uppercase;
 			background-color: $main-color;
 			padding: 5px 15px;
