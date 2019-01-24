@@ -13,6 +13,7 @@ body{
 .main-page.container-fluid{
 	margin-bottom: 30px;
 	padding: 0px 30px;
+	max-width: 1920px;
 }
 .pushy{
 	font-family: 'Roboto', sans-serif;
@@ -154,10 +155,31 @@ body{
 		display: flex;
 		height: 500px;
 		flex: 1 1 auto;
-		background-image: url("../img/bg.jpg");
+		background-image: url("../img/club.jpg");
 		background-repeat: no-repeat, repeat;
 		background-position: center;
 		background-size: cover;
+	}
+	.welcome-teaser{
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.welcome-header{
+			.sub{
+				background-color: $main-color;
+				color:  $main-color-background;
+				font-weight: 200;
+				font-size: 23px;
+				display: inline-flex;
+				padding: 0px 15px;
+			}
+			h3{
+				background-color: $main-color-background;
+				padding: 15px;
+			}
+
+		}
 	}
 
 
@@ -184,6 +206,15 @@ body{
 	&.img-2{
 		background-image: url("../img/tanz_wm_pr__1000.jpg");
 	}
+	&.img-3{
+		background-image: url("../img/dance.jpg");
+	}
+	&.img-4{
+		background-image: url("../img/tanzschule.jpg");
+	}
+	&.img-5{
+		background-image: url("../img/club.jpg");
+	}
 	.content{
 		height: 200px;
 		position: absolute;
@@ -193,9 +224,10 @@ body{
 		transform: translateY(70px);
 		transition: transform 0.3s;
 		.categorie{
+			text-transform: uppercase;
 			background-color: $main-color;
 			padding: 5px 15px;
-			color: #fff;
+			color: $main-color-background;
 			display: inline-flex;
 			font-weight: 400;
 		}
@@ -204,13 +236,13 @@ body{
 			padding: 15px;
 			.header{
 				span {
-					color: $main-color-background-font;
+					color: gray;
 					margin-bottom: 20px;
 					padding: 1px;
 					font-weight: 100;
 					font-size: 23px;
 				}
-				color: gray;
+				color: $main-color-background-font;
 				margin-bottom: 30px;
 			}
 			p{
@@ -230,6 +262,18 @@ body{
 
 
 @include media-breakpoint-only(xs) {
+	.header-pointer{
+		.welcome-teaser{
+			.welcome-header{
+				}
+				h3{
+					font-size: 35px;
+					background-color: $main-color-background;
+					padding: 15px;
+				}
+
+			}
+	}
 	.main-page.container-fluid{
 		padding: 0px;
 		margin: 0px;
