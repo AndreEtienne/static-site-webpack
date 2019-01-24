@@ -6,6 +6,16 @@ import {tns} from '../../node_modules/tiny-slider/src/tiny-slider'
 import '../css/main.scss'
 
 $( document ).ready(function() {
+
+
+    var slider = tns({
+        container: '.news-slider',
+        items: 1,
+        autoplay: true,
+        controls: false,
+        nav: false,
+        autoplayButtonOutput: false
+    });
     // Hide Header on on scroll down
     var didScroll;
     var lastScrollTop = 0;
