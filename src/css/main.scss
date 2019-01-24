@@ -10,8 +10,9 @@
 body{
 	margin-top: 60px;
 }
-.main-page{
+.main-page.container-fluid{
 	margin-bottom: 30px;
+	padding: 0px 30px;
 }
 .pushy{
 	font-family: 'Roboto', sans-serif;
@@ -147,10 +148,11 @@ body{
 }
 .header-pointer{
 	.img-pointer{
-		margin-bottom: 15px;
+		margin-bottom: 30px;
+		margin-top: 30px;
 		position: relative;
 		display: flex;
-		height: 800px;
+		height: 500px;
 		flex: 1 1 auto;
 		background-image: url("../img/bg.jpg");
 		background-repeat: no-repeat, repeat;
@@ -161,7 +163,7 @@ body{
 
 }
 .show-img-conatiner{
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -183,18 +185,41 @@ body{
 		background-image: url("../img/tanz_wm_pr__1000.jpg");
 	}
 	.content{
-		background: $main-color-background;
 		height: 200px;
-		padding: 15px;
 		position: absolute;
 		bottom: 0px;
 		left: 0px;
 		width: 100%;
-		transform: translateY(100px);
+		transform: translateY(70px);
 		transition: transform 0.3s;
-		h2{
-			margin-bottom: 40px;
+		.categorie{
+			background-color: $main-color;
+			padding: 5px 15px;
+			color: #fff;
+			display: inline-flex;
+			font-weight: 400;
 		}
+		.content-buttom{
+			background: $main-color-background;
+			padding: 15px;
+			.header{
+				span {
+					color: $main-color-background-font;
+					margin-bottom: 20px;
+					padding: 1px;
+					font-weight: 100;
+					font-size: 23px;
+				}
+				color: gray;
+				margin-bottom: 30px;
+			}
+			p{
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-width: 600px;
+			}
+		}
+
 	}
 	&:hover{
 		.content{
@@ -202,8 +227,21 @@ body{
 		}
 	}
 }
-@media (max-width: 767.98px) {
-	.main-page{
+@media (max-width: 1024px) {
+	.main-page.container-fluid{
 		padding: 0px;
+	}
+	.show-img-conatiner{
+		justify-content: flex-end;
+		.content{
+			height: auto;
+			transform: none;
+			position: relative;
+		}
+		&:hover{
+			.content{
+				transform: none
+			}
+		}
 	}
 }
