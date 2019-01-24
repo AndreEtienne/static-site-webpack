@@ -300,11 +300,15 @@ body{
 }
 @include media-breakpoint-down(lg) {
 	.show-img-conatiner{
+		&:hover{
+			.img{
+				transform: none;
+			}
+		}
 		justify-content: flex-end;
 		.content{
 			height: auto;
 			transform: none;
-			position: relative;
 		}
 		&:hover{
 			.content{
