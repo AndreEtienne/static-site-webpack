@@ -175,6 +175,7 @@ body{
 				padding: 0px 15px;
 			}
 			h3{
+				word-break: break-word;
 				background-color: $main-color-background;
 				padding: 15px;
 			}
@@ -267,7 +268,7 @@ body{
 			.welcome-header{
 				}
 				h3{
-					font-size: 35px;
+					font-size: 40px;
 					background-color: $main-color-background;
 					padding: 15px;
 				}
