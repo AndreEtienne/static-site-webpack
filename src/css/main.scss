@@ -8,7 +8,7 @@
 @import "default";
 
 body{
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.9);
 	margin-top: 60px;
 }
 .main-page.container-fluid{
@@ -315,6 +315,10 @@ body{
 
 
 @include media-breakpoint-only(xs) {
+	body{
+		margin-top: 0px;
+	}
+
 	.header-pointer{
 		.welcome-teaser{
 			.welcome-header{
