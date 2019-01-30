@@ -14,7 +14,7 @@ $( document ).ready(function() {
         items: 1,
         autoplay: true,
         controls: false,
-        nav: false,
+        nav: true,
         autoplayButtonOutput: false
     });
     // Hide Header on on scroll down

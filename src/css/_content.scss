@@ -1,0 +1,202 @@
+
+body{
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 60px;
+}
+.main-page.container-fluid{
+  padding: 0px 30px;
+  max-width: 1920px;
+  >.row >div{
+    margin-bottom: 80px;
+  }
+}
+.header-pointer{
+  .img-pointer{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    height: 500px;
+    flex: 1 1 auto;
+    background-image: url("../img/club.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .welcome-teaser{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .welcome-header{
+      .sub{
+        background-color: $main-color;
+        color:  $main-color-background;
+        font-weight: 200;
+        font-size: 23px;
+        display: inline-flex;
+        padding: 0px 15px;
+      }
+      h3{
+        background-color: $main-color-background;
+        padding: 15px;
+      }
+
+    }
+  }
+
+
+}
+.img{
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  max-height: 500px;
+  transition: transform 0.3s;
+}
+.img{
+  background-image: url("../img/zumba.jpg");
+}
+.img-1{
+  background-image: url("../img/bg.jpg");
+}
+.img-2{
+  background-image: url("../img/tanz_wm_pr__1000.jpg");
+}
+.img-3{
+  background-image: url("../img/dance.jpg");
+}
+.img-4{
+  background-image: url("../img/tanzschule.jpg");
+}
+.img-5{
+  background-image: url("../img/club.jpg");
+}
+.category{
+  text-transform: uppercase;
+  background-color: $main-color;
+  padding: 5px 15px;
+  color: $main-color-background;
+  display: inline-flex;
+  font-weight: 400;
+}
+.tsgb-footer{
+  color: white;
+  .category{
+    margin-bottom: 15px;
+  }
+}
+.show-img-conatiner{
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  max-height: 500px;
+  flex: 1 1 auto;
+  transition: transform 0.3s;
+  .content{
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    transform: translateY(70px);
+    transition: transform 0.3s;
+    .category{
+      text-transform: uppercase;
+      background-color: $main-color;
+      padding: 5px 15px;
+      color: $main-color-background;
+      display: inline-flex;
+      font-weight: 400;
+    }
+    .content-buttom{
+      background: $main-color-background;
+      padding: 15px;
+      .header{
+        span {
+          color: gray;
+          margin-bottom: 20px;
+          padding: 1px;
+          font-weight: 100;
+          font-size: 23px;
+        }
+        color: $main-color-background-font;
+        margin-bottom: 30px;
+      }
+      p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 600px;
+      }
+    }
+
+  }
+  &:hover{
+    .content{
+      transform: translateY(0px)
+    }
+    .img{
+      transform: scale(1.04);
+    }
+  }
+}
+
+
+@include media-breakpoint-only(xs) {
+  body{
+    margin-top: 0px;
+  }
+  .link-footer{
+    ul{
+      margin-left: 0px;
+    }
+  }
+  .header-pointer{
+    .welcome-teaser{
+      .welcome-header{
+      }
+      h3{
+        font-size: 40px;
+        background-color: $main-color-background;
+        padding: 15px;
+      }
+
+    }
+  }
+  .main-page.container-fluid{
+    padding: 0px;
+    margin: 0px;
+    .col{
+      padding: 0px;
+    }
+    .row {
+      margin: 0px;
+      >div{
+        padding: 0px;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .show-img-conatiner{
+    &:hover{
+      .img{
+        transform: none;
+      }
+    }
+    justify-content: flex-end;
+    .content{
+      height: auto;
+      transform: none;
+    }
+    &:hover{
+      .content{
+        transform: none
+      }
+    }
+  }
+}

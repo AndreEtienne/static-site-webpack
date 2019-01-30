@@ -1,0 +1,123 @@
+.pushy{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: $main-color-background;
+  a{
+    color: $main-color-background-font;
+  }
+  a:hover{
+    color: $main-color-background-font;
+  }
+  .pushy-submenu{
+    div{
+      display: block;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-decoration: none;
+      position: relative;
+    }
+    div::after{
+      content: '';
+      display: block;
+      height: 11px;
+      width: 8px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      background: url(../img/arrow.svg) no-repeat;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: transform 0.2s;
+    }
+  }
+  .pushy-submenu {
+    .pushy-link{
+      border-left: none;
+    }
+  }
+}
+
+
+
+.tsgb-main-nav{
+  z-index: 9;
+  display: flex;
+  height: 60px;
+  position: fixed;
+  transform: translateY(0px);
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  background-color: $main-color-background;
+  .tsgb-logo{
+    margin-left: 15px;
+    display: inline-flex;
+    img{
+      width: 100%;
+      max-width: 325px;
+      height: 55px;
+    }
+  }
+  .tsgb-menu-entry{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-btn{
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 21px;
+    padding: 10px;
+  }
+  .tsgb-nav-page{
+    display: flex;
+    flex: 1 1 ;
+    justify-content: flex-start;
+    position: relative;
+    >ul{
+      margin-left: 20px;
+      cursor: pointer;
+      font-weight: 300;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 0px;
+      >li:first-child {
+        margin-left: 0px;
+      }
+      >li{
+        margin: 0px 10px;
+        white-space: nowrap;
+        a {
+          color: $main-color-background-font;
+          padding-bottom: 5px;
+          display: block;
+          font-size: 25px;
+        }
+      }
+    }
+    ul > li:hover{
+      .dropdown{
+        display: block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    .dropdown{
+      position: absolute;
+      z-index: 2;
+      background-color: $nav-dropdown-color;
+      visibility:hidden;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      min-width: 220px;
+      ul{
+        padding: 15px;
+      }
+    }
+  }
+}
+.nav-up {
+  transform: translateY(-70px);
+}
