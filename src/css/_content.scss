@@ -9,6 +9,9 @@ body{
   >.row >div{
     margin-bottom: 80px;
   }
+  &.tsgb-footer .row >div{
+    margin-bottom: 15px;
+  }
 }
 .header-pointer{
   .img-pointer{
@@ -81,6 +84,8 @@ body{
   font-weight: 400;
 }
 .tsgb-footer{
+  padding-top: 15px !important;
+  border-top: 2px solid $main-color;
   color: white;
   .category{
     margin-bottom: 15px;
