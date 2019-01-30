@@ -1,3 +1,4 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~bootstrap/scss/bootstrap-grid";
 @import "~bootstrap/scss/bootstrap-reboot";
 @import "~bootstrap/scss/images";
@@ -61,8 +62,9 @@ body{
 	display: flex;
 	height: 60px;
 	position: fixed;
+	transform: translateY(0px);
 	top: 0;
-	transition: top 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	width: 100%;
 	background-color: $main-color-background;
 	.tsgb-logo{
@@ -134,7 +136,7 @@ body{
 	}
 }
 .nav-up {
-	top: -70px;
+	transform: translateY(-70px);
 }
 .tsgb-slider{
 	display: flex;

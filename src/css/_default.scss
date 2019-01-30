@@ -56,3 +56,61 @@ ul{
     right: 0;
   }
 }
+.social-bar.open{
+  transform: translateX(0);
+
+}
+.social-bar.close{
+  transform: translateX(100px);
+}
+.social-bar{
+  transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  display: flex;
+  position: fixed;
+  top: 20%;
+  right: 2%;
+  .social-icons{
+    display: flex;
+    flex-direction: column;
+    a{
+      margin: 2px 0px;
+      svg{
+        padding: 5px;
+        transition: all 0.2s ease-in-out;
+        border-radius: 3rem;
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+      }
+      &.instagram svg{
+        color: #ffff;
+        background:
+            // left bottom
+            radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+            radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+              // left top
+            radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+            radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+              //  right top
+            radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+            radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+              // right bottom
+            radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+              /////// create a base coat to smooth
+              /////// corner gradients
+            linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+      }
+      &.facebook svg{
+        color: #ffffff;
+        background-color: #3b5998;
+      }
+      &.twitter svg{
+        color: #ffffff;
+        background-color: #00acee;
+      }
+      &:hover svg{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
