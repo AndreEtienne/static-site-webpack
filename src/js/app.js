@@ -1,10 +1,10 @@
-require('jquery')
-require('popper.js')
-require('bootstrap')
-require('@fortawesome/fontawesome-free/js/all')
-require('../../node_modules/@cmyee/pushy/js/pushy.js')
-import {tns} from '../../node_modules/tiny-slider/src/tiny-slider'
-import '../css/main.scss'
+require('jquery');
+require('popper.js');
+require('bootstrap');
+require('@fortawesome/fontawesome-free/js/all');
+require('../../node_modules/@cmyee/pushy/js/pushy.js');
+import {tns} from '../../node_modules/tiny-slider/src/tiny-slider';
+import '../css/main.scss';
 
 $( document ).ready(function() {
 
@@ -45,17 +45,15 @@ $( document ).ready(function() {
         if (st > lastScrollTop && st > navbarHeight){
             // Scroll Down
             $('header').removeClass('nav-down').addClass('nav-up');
-            $('.social-bar').removeClass('open').addClass('close')
+            $('.social-bar').removeClass('open').addClass('close');
         } else {
             // Scroll Up
             if(st + $(window).height() < $(document).height()) {
                 $('header').removeClass('nav-up').addClass('nav-down');
-                $('.social-bar').removeClass('close').addClass('open')
+                $('.social-bar').removeClass('close').addClass('open');
             }
         }
 
         lastScrollTop = st;
     }
 });
-
-
