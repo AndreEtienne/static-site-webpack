@@ -2,7 +2,9 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
   margin-top: 60px;
 }
-
+.container-fluid.teams-view{
+  margin-top: -60px;
+}
 .main-page.container-fluid {
   max-width: 1920px;
   padding: 0 30px;
@@ -198,18 +200,26 @@ body {
     }
   }
 }
-#video-background{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
+
+#video-background {
+  object-fit: cover;
+  width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
+  position: fixed;
   z-index: -100;
- }
+}
+
+.header-video {
+  min-height: 600px;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+
 @include media-breakpoint-down(lg) {
-  .show-img-conatiner{
+  .show-img-conatiner {
     &:hover{
       .img{
         transform: none;

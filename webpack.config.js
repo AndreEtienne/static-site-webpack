@@ -1,19 +1,19 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const webpack = require('webpack')
-const mode = process.env.mode
-const ImageminPlugin = require('imagemin-webpack-plugin').default
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const webpack = require('webpack');
+const mode = process.env.mode;
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const extractPlugin = new ExtractTextPlugin({
 	filename: 'main.css'
-})
+});
 function watcher (env) {
 	return env !== 'production';
 }
 config = {
 	mode,
-}
+};
 module.exports = (env, options) => {
 	return {
 		entry: {
@@ -55,7 +55,7 @@ module.exports = (env, options) => {
 					use: ['pug-loader']
 				},
 				{
-					test: /\.(jpg|png|svg)/,
+					test: /\.(jpg|png|svg|mp4)/,
 					use: [
 						{
 							loader: 'file-loader',
@@ -108,5 +108,5 @@ module.exports = (env, options) => {
 				title: "Content page"
 			})
 		]
-	}
-}
+	};
+};
