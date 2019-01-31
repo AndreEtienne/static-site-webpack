@@ -199,14 +199,14 @@ body {
   }
 }
 #video-background{
-    position: fixed;
-   right: 0;
-   bottom: 0;
-   min-width: 100%;
-   min-height: 100%;
-   width: auto;
-   height: auto;
-   z-index: -100;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
  }
 @include media-breakpoint-down(lg) {
   .show-img-conatiner{
