@@ -62,7 +62,7 @@ body {
   background-size: cover;
   height: 500px;
   max-height: 500px;
-  transition: transform .3;
+  transition: transform .3s;
 }
 
 .img {
@@ -115,7 +115,6 @@ body {
   height: 500px;
   max-height: 500px;
   flex: 1 1 auto;
-  transition: transform 0.3s;
   .content{
     height: 200px;
     position: absolute;
